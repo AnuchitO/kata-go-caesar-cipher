@@ -5,11 +5,11 @@ func Caesar(text string, shift int) string {
 
 	if b[0] == 'Z' {
 		if shift == 1 {
-			return "A"
+			return string(byte(65) + byte(0))
 		}
 
 		if shift == 2 {
-			return "B"
+			return string(byte(65) + byte(1))
 		}
 	}
 
