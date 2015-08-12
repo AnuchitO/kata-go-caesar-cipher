@@ -18,22 +18,6 @@ func TestAShift2ShouldBeC(t *testing.T) {
 	}
 }
 
-func TestAShift3ShouldBeD(t *testing.T) {
-	c := Caesar("A", 3)
-
-	if c != "D" {
-		t.Errorf(`expect "D" but got %s`, c)
-	}
-}
-
-func TestAShift3ShouldBeE(t *testing.T) {
-	c := Caesar("A", 4)
-
-	if c != "E" {
-		t.Errorf(`expect "E" but got %s`, c)
-	}
-}
-
 func TestAAShift1ShouldBeBB(t *testing.T) {
 	c := Caesar("AA", 1)
 
@@ -71,6 +55,13 @@ func TestYShift2ShouldBeA(t *testing.T) {
 	c := Caesar("Y", 2)
 
 	if c != "A" {
+		t.Errorf(`expect "A" but got %s`, c)
+	}
+}
+func TestCShiftNavgative2ShouldBeB(t *testing.T) {
+	c := Caesar("A", -2)
+
+	if c != "X" {
 		t.Errorf(`expect "A" but got %s`, c)
 	}
 }
