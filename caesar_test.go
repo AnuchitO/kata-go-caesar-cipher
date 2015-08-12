@@ -58,10 +58,3 @@ func TestYShift2ShouldBeA(t *testing.T) {
 		t.Errorf(`expect "A" but got %s`, c)
 	}
 }
-func TestCShiftNavgative2ShouldBeB(t *testing.T) {
-	c := Caesar("A", -2)
-
-	if c != "X" {
-		t.Errorf(`expect "A" but got %s`, c)
-	}
-}
