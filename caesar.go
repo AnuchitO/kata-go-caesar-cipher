@@ -1,10 +1,10 @@
 package main
 
-func Caesar(text string, shift int) string {
-	b := []byte(text)
+func Caesar(text string, shift int32) string {
+	var b []byte
 
-	for index := 0; index < len(b); index++ {
-		b[index] = byte(65) + (b[index]+byte(shift)-65)%26
+	for _, c := range text {
+		b = append(b, byte(65+(c+shift-65)%26))
 	}
 
 	return string(b)
