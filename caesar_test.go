@@ -33,3 +33,20 @@ func TestAShift3ShouldBeE(t *testing.T) {
 		t.Errorf(`expect "E" but got %s`, c)
 	}
 }
+
+func TestAAShift1ShouldBeBB(t *testing.T) {
+	c := Caesar("AA", 1)
+
+	if c != "BB" {
+		t.Errorf(`expect "BB" but got %s`, c)
+	}
+
+}
+
+func TestAAAShift1ShouldBeBBB(t *testing.T) {
+	c := Caesar("AAA", 1)
+
+	if c != "BBB" {
+		t.Errorf(`expect "BBB" but got %s`, c)
+	}
+}
