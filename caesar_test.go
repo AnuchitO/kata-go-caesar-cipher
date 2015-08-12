@@ -66,3 +66,11 @@ func TestZShift2ShouldBeB(t *testing.T) {
 		t.Errorf(`expect "B" but got %s`, c)
 	}
 }
+
+func TestYShift2ShouldBeA(t *testing.T) {
+	c := Caesar("Y", 1)
+
+	if c != "A" {
+		t.Errorf(`expect "A" but got %s`, c)
+	}
+}
