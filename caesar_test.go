@@ -58,3 +58,14 @@ func TestYShift2ShouldBeA(t *testing.T) {
 		t.Errorf(`expect "A" but got %s`, c)
 	}
 }
+
+func TestStructAShift1ShouldBeB(t *testing.T) {
+	c := CaesarCipher{
+		text:  "A",
+		shift: 1,
+	}
+
+	if c.GetCipher() != "B" {
+		t.Errorf(`expect "B" but got %s`, c.GetCipher())
+	}
+}
